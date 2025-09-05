@@ -10,13 +10,13 @@ void merge(int *arr, int s, int e) {
     int *first = new int[len1];
     int *second = new int[len2];
 
-    // copy elements for first half
+    
     int k = s;
     for (int i = 0; i < len1; i++) {
         first[i] = arr[k++];
     }
 
-    // copy elements for second half
+    
     k = mid + 1;
     for (int i = 0; i < len2; i++) {
         second[i] = arr[k++];
@@ -29,7 +29,7 @@ void merge(int *arr, int s, int e) {
 
     while (index1 < len1 && index2 < len2) {
         if (first[index1] < second[index2]) {
-            arr[k++] = first[index1++];  // ✅ fixed missing line
+            arr[k++] = first[index1++];  
         } else {
             arr[k++] = second[index2++];
         }
